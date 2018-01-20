@@ -4,8 +4,13 @@ const express = require('express');
 const morgan = require('morgan');
 const logger = require('winston');
 const bodyParser = require('body-parser');
+const mongoose = require("mongoose");
 
 const api = require("./api/v1");
+const config = require("./config");
+
+// Connect to db
+mongoose.connect(config.db.url);
 
 const app = express();
 // Setup middleware
