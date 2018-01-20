@@ -23,22 +23,22 @@ exports.post = (req, res, next) => {
     var autor = req.body.autor;
     var ubicacion = req.body.ubicacion;
     if (!contenido){
-      return res.status(422).json({"error":"Campo Contenido no fue encontrado"});
+      return res.status(422).JSON.stringify({"error":"Campo Contenido no fue encontrado"});
     }
     if (!autor){
-      return res.status(422).json({error:"Campo Autor no fue encontrado"});
+      return res.status(422).JSON.stringify({error:"Campo Autor no fue encontrado"});
     }
     if(!ubicacion){
-      return res.status(422).json({error:"Campo Ubicacion no fue encontrado"});
+      return res.status(422).JSON.stringify({error:"Campo Ubicacion no fue encontrado"});
     }
     if(contenido.length > 280){
-      return res.status(422).json({error:"Campo Contenido excede los 280 caracteres"});
+      return res.status(422).JSON.stringify({error:"Campo Contenido excede los 280 caracteres"});
     }
     if(autor.length > 32){
-      return res.status(422).json({error:"Campo Autor excede los 32 caracteres"});
+      return res.status(422).JSON.stringify({error:"Campo Autor excede los 32 caracteres"});
     }
     if(ubicacion.length > 64){
-      return res.status(422).json({error:"Campo ubicacion excede los 64 caracteres"});
+      return res.status(422).JSON.stringify({error:"Campo ubicacion excede los 64 caracteres"});
     }
     new_post = {
       contenido: contenido,
