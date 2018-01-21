@@ -15,8 +15,8 @@ const PostSchema = new Schema({
       require: true
   },
   author: {
-      type: String,
-      require: true
+      type: Schema.Types.ObjectId,
+      ref: 'user'
   },
   location: {
       type: String,
