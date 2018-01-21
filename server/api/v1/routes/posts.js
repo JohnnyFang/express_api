@@ -12,11 +12,13 @@ const controller = require("./../controllers/posts");
  * /api/posts/:id  DELETE - DELETE
  */
 
-router.route("/")
+router.route('/')
     .get(controller.all)
     .post(controller.post);
 
-router.route("/:id")
+router.param('id', controller.find);
+
+router.route('/:id')
     .get(controller.get)
     .put(controller.put)
     .delete(controller.delete);

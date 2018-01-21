@@ -30,7 +30,7 @@ var validateEmail = function(email) {
     return re.test(email)
 };
 
-const PostSchema = new Schema({
+const UserSchema = new Schema({
   firstname: {
       type: String,
       require: true,
@@ -51,4 +51,4 @@ const PostSchema = new Schema({
 }
 );
 
-module.exports = mongoose.model("post", PostSchema);
+module.exports = mongoose.model("post", UserSchema);
