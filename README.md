@@ -1,4 +1,4 @@
-# express_api 
+# express_api + Mongodb
 ## Install
 wow wow slow down cow boy! first things first!
 
@@ -23,6 +23,23 @@ then start it
 ```
 npm run dev
 ```
+
+## Install mongoDB
+### Windows
+grab mongoDB from [here](https://www.mongodb.com/download-center) 
+   
+make sure you create the following directory structure (under c:)
+``` 
+data\db
+```
+to start mongoDB run mongod.exe
+```
+C:\Program Files\MongoDB\bin\mongod.exe
+
+```   
+   
+ for more info check [stackoverflow](https://stackoverflow.com/questions/2404742/how-to-install-mongodb-on-windows)
+
 ## Entities
 ### Post
 supports CRUD ops *[Create, Read, Update, Delete]*
