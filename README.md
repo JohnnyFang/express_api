@@ -40,7 +40,7 @@ supports CRUD ops *[Create, Read, Update, Delete]*
  * /api/posts/:id    PUT    - updates a post
  * /api/posts/:id    DELETE - deletes a post
  ```
- ####Example
+ #### Example
   ```
   {
   "content": "Hello World",
