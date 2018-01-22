@@ -34,11 +34,11 @@ supports CRUD ops *[Create, Read, Update, Delete]*
     
  #### Routes
  ```
- * /api/posts/       GET    - lista todos los anuncions
- * /api/posts/       POST   - CREA UN ANUNCIO
- * /api/posts/:id    GET    - OBTIENE UN ANUNCION
- * /api/posts/:id    PUT    - actualiza un anuncion
- * /api/posts/:id    DELETE - ELIMINA UN ANUNCIO
+ * /api/posts/       GET    - lists all posts
+ * /api/posts/       POST   - creates a post
+ * /api/posts/:id    GET    - gets a post
+ * /api/posts/:id    PUT    - updates a post
+ * /api/posts/:id    DELETE - deletes a post
  ```
  
 ### User
@@ -51,9 +51,9 @@ supports CRUD ops *[Create, Read, Update, Deactivate (a.k.a **soft delete)**]*
   ● timestamps  (auto generated)   
  #### Routes
  ```
- * /api/users/       GET    - lista todos los Usuarios
- * /api/users/       POST   - CREA UN Usuario
- * /api/users/:id    GET    - OBTIENE UN Usuario
- * /api/users/:id    PUT    - actualiza un Usuario
- * /api/users/:id    DELETE - ELIMINA UN Usuario
+ * /api/users/       GET    - list all active users
+ * /api/users/       POST   - creates user
+ * /api/users/:id    GET    - gets user
+ * /api/users/:id    PUT    - updates user
+ * /api/users/:id    DELETE - deactivates user (soft delete)
  ```
