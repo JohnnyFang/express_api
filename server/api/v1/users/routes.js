@@ -2,14 +2,14 @@
 
 const router = require("express").Router();
 
-const controller = require("./../controllers/posts");
+const controller = require("./controller");
 
 /*
- * /api/posts/     GET    - READ ALL
- * /api/posts/     POST   - CREATE
- * /api/posts/:id  GET    - READ ONE
- * /api/posts/:id  PUT    - UPDATE
- * /api/posts/:id  DELETE - DELETE
+ * /api/users/     GET    - READ ALL
+ * /api/users/     POST   - CREATE
+ * /api/users/:id  GET    - READ ONE
+ * /api/users/:id  PUT    - UPDATE
+ * /api/users/:id  DELETE - DELETE
  */
 
 router.route('/')

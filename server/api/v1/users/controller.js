@@ -1,5 +1,5 @@
 "use strict";
-const User = require("./../schemas/users");
+const User = require("./model");
 
 const logger = require("winston");
 /*

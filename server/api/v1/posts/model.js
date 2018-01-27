@@ -14,6 +14,7 @@ const PostSchema = new Schema({
       type: String,
       require: true
   },
+  // TODO change author field to user
   author: {
       type: Schema.Types.ObjectId,
       ref: 'user'

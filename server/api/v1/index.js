@@ -1,9 +1,8 @@
 "use strict";
-
 const router = require("express").Router();
 
-const postsRoutes = require("./routes/posts");
-const usersRoutes = require("./routes/users");
+const postsRoutes = require("./posts/routes");
+const usersRoutes = require("./users/routes");
 
 router.use("/posts", postsRoutes);
 router.use("/users", usersRoutes);

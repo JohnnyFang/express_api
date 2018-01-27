@@ -1,5 +1,5 @@
 "use strict";
-const Post = require("./../schemas/posts");
+const Post = require("./model");
 
 const logger = require("winston");
 /*
