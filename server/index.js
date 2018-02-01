@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 
 const api = require("./api/v1");
+const cors = require('cors');
 const config = require("./config");
 
 // Connect to db
@@ -19,6 +20,11 @@ app.use(morgan("common"));
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
+
+app.use(cors({
+    origin: config.cors.origin,
+    credentials: Boolean(config.cors.credentials)
+}));
 
 app.use("/api", api);
 app.use("/api/v1", api);

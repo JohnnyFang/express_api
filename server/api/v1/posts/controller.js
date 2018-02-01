@@ -28,13 +28,14 @@ exports.find = (req, res, next, id) => {
 };
 
 exports.all = (req, res, next) => {
-const limit = Number(req.query.limit) || 10;
-const skip = Number(req.query.skip) || 0;
+    const limit = Number(req.query.limit) || 10;
+    const skip = Number(req.query.skip) || 0;
 
     Post.find()
         .skip(skip)
         .limit(limit)
         .populate('user')
+        .sort({createdAt:-1})
         .then( docs => {
           res.json({
               data: docs,

@@ -1,10 +1,16 @@
-"use strict";
+
+
+require('dotenv').config()
 
 const config = {
-    hostname: "127.0.0.1",
-    port: 3030,
+    hostname: process.env.IP,
+    port: process.env.PORT,
     db: {
-        url: "mongodb://localhost/library"
+        url: process.env.DBURL
+    },
+    cors: {
+        origin: process.env.ORIGIN || '*',
+        credentials: process.env.CREDENTIALS
     }
 };
 

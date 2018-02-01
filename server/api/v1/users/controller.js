@@ -28,9 +28,16 @@ exports.find = (req, res, next, id) => {
 };
 
 exports.all = (req, res, next) => {
+    const limit = Number(req.query.limit) || 10;
+    const skip = Number(req.query.skip) || 0;
+
     User.find({active: true})
-        .then( doc => {
-          res.json(doc)
+        .skip(skip)
+        .limit(limit)
+        .then( docs => {
+          res.json({
+            data: docs,
+          })
         })
         .catch( err => {
           next(new Error(err));
